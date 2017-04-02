@@ -24,9 +24,10 @@ public class WikipediaSender {
     }
 
     public Optional<String> fetchResultsPage(Championship champName, String year) {
-        String special = specialUrls.get(mapKey(champName, year));
+        String urlYear = champName.equals(Championship.FORMULA_E) ? feYear(year) : year;
+        String special = specialUrls.get(mapKey(champName, urlYear));
         String subUrl = special == null ? subUrls.get(champName) : special;
-        String url = baseUrl + year + "_" + subUrl;
+        String url = baseUrl + urlYear + "_" + subUrl;
         System.out.println(url);
         WebTarget target = client.target(url);
         Response response = target.request()
@@ -38,5 +39,11 @@ public class WikipediaSender {
         }
         // TODO consider 302
         return Optional.empty();
+    }
+
+    private String feYear(String year) {
+        int previousYear = Integer.parseInt(year) - 1;
+        String nextYear = year.substring(year.length() - 2, year.length());
+        return String.valueOf(previousYear) + "-" + nextYear;
     }
 }

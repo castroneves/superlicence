@@ -27,6 +27,9 @@ public class WikipediaParser {
                 .filter(e -> e.html().contains(">Driver</th>"))
                 .filter(e -> !e.html().contains("Winner"))
                 .filter(e -> !e.html().contains(">Rounds</th>"))
+                .filter(e -> !e.html().contains(">Round</th>"))
+                .filter(e -> !e.html().contains(">Car</th>"))
+                .filter(e -> !e.html().contains(">Vehicle</th>"))
                 .collect(toList());
 
 

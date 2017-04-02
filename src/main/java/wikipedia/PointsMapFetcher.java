@@ -21,6 +21,13 @@ public class PointsMapFetcher {
         result.put(Championship.LMP1, pointsMap(Arrays.asList(40, 30, 20, 10, 8, 6, 4, 3, 2,1)));
         result.put(Championship.INDYCAR, pointsMap(Arrays.asList(40, 30, 20, 10, 8, 6, 4, 3, 2,1)));
         result.put(Championship.WSR, pointsMap(Arrays.asList(35, 25, 20, 15, 10, 7, 5, 3, 2,1)));
+        result.put(Championship.GP3, pointsMap(Arrays.asList(30, 20, 15, 10, 7, 5, 3, 2,1)));
+        result.put(Championship.SUPER_FORMULA, pointsMap(Arrays.asList(25, 20, 15, 10, 7, 5, 3, 2,1)));
+        result.put(Championship.WTCC, pointsMap(Arrays.asList(15, 12,10, 7, 5, 3, 2,1)));
+        result.put(Championship.WRC, pointsMap(Arrays.asList(15, 12,10, 7, 5, 3, 2,1)));
+        result.put(Championship.DTM, pointsMap(Arrays.asList(15, 12,10, 7, 5, 3, 2,1)));
+        result.put(Championship.INDY_LIGHTS, pointsMap(Arrays.asList(15, 12,10, 7, 5, 3, 2,1)));
+        result.put(Championship.V8_SUPERCARS, pointsMap(Arrays.asList(13, 11,9, 6, 4, 3, 2,1)));
 
         return result;
     }

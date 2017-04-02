@@ -32,7 +32,7 @@ public class SuperLicenceFinder {
 
 
     public List<SuperlicenceScore> calculate() {
-        List<String> years = Arrays.asList("2016");
+        List<String> years = Arrays.asList("2016","2015","2014");
         Map<Championship, Map<Integer, Integer>> championshipPoints = pointsMapFetcher.fetch();
         List<DriverResult> results = years.stream()
                 .flatMap(y -> resultsForAllChamps(y).stream())
